@@ -1,0 +1,3 @@
+<!DOCTYPE html>
+<h3>Hey <%= @contact.first_name %>, did you know?</h3>
+<p><%= @news_item %></p>

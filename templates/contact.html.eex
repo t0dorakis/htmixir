@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="<https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css>" />
-		<script src="<https://unpkg.com/htmx.org@1.9.10>" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+    <script src="/assets/htmx.min.js"></script>
   </head>
-	<body>
-		<div hx-target="this" hx-swap="outerHTML">
-			<div><label>First Name</label>: <%= @contact.first_name %></div>
-			<div><label>Last Name</label>: <%= @contact.last_name %></div>
-			<div><label>Email</label>: <%= @contact.email %></div>
-			<button hx-get="/contact/1/edit" class="btn btn-primary">
-				Click To Edit
-			</button>
-		</div>
-	</body>
+  <body>
+    <div hx-target="this" hx-swap="innerHTML">
+      <div class="form-group">
+        <label>First Name</label>: <%= @contact.first_name %>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>: <%= @contact.last_name %>
+      </div>
+      <div class="form-group"><label>Email</label>: <%= @contact.email %></div>
+      <button hx-get="/contact/1/edit" class="btn btn-primary">
+        Click To Edit
+      </button>
+    </div>
+  </body>
 </html>

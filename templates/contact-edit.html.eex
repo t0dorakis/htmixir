@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="<https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css>" />
-		<script src="<https://unpkg.com/htmx.org@1.9.10>" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+		<script src="/assets/htmx.min.js"></script>
 	</head>
 	<body>
-		<form hx-put="/contact/1" hx-target="this" hx-swap="outerHTML">
+		<form hx-put="/contact/1" hx-target="this" hx-swap="innerHTML">
 			<div>
 				<label>First Name</label>
 				<input type="text" name="firstName" value="<%= @contact.first_name %>">

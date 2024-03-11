@@ -1,21 +1,31 @@
 # Htmixir
 
-**TODO: Add description**
+A simple Elixir Test Server to try out the HTMX for a lunch and learn session at Funke.
 
-## Installation
+## Installing Elixir
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `htmixir` to your list of dependencies in `mix.exs`:
+macOS:
 
-```elixir
-def deps do
-  [
-    {:htmixir, "~> 0.1.0"}
-  ]
-end
+```bash
+brew install elixir
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/htmixir>.
+Linux:
 
+```bash
+sudo apt-get install elixir
+```
+
+## Running the Server
+
+```bash
+mix deps.get
+mix run --no-halt
+```
+
+Open your browser and go to `http://0.0.0.0:4000`
+
+## Ressources
+
+- [HTMX](https://htmx.org/)
+- [Elixir](https://elixir-lang.org/)

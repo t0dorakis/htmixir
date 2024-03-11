@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTMX Newspaper</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/htmx.min.js"></script>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <main>
+    <h1>HTMX Newspaper</h1>
+
+    <div class="article">
+      <div class="article-content">
+        <h3>High Power Tools for Modern Web Development</h3>
+        <p>
+          HTMX is a javascript library that allows you to access AJAX,
+          WebSockets and Server Sent Events directly in HTML, using
+          attributes, so you can build modern user interfaces with the
+          simplicity and power of hypertext.
+        </p>
+      </div>
+    </div>
+    <div class="news-ticker-wrapper">
+      <h4>News Ticker 🔥</h4>
+      <hr />
+      <div hx-get="/newsTicker" hx-trigger="load, every 2s" hx-swap="innerHTML" id="news-ticker"></div>
+    </div>
+    <!-- another block of random htmx newspaper content with a picture on the left side -->
+    <div class="article">
+      <div class="article-image"></div>
+      <div class="article-content">
+        <h2>HTMX: High Power Tools for Modern Web Development</h2>
+        <p>
+          Funky fresh content about HTMX and how it's the best thing since
+          sliced bread. It's so good, you'll want to tell your friends about
+          it. It's so good, you'll want to tell your friends about it. It's so
+          good, you'll want to tell your friends about it. It's so good,
+          you'll
+        </p>
+      </div>
+    </div>
+    <form hx-get="/contact/1" hx-trigger="load" hx-swap="innerHTML" id="contact-form"></form>
+  </main>
+</body>
+
+</html>

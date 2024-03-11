@@ -12,6 +12,10 @@ defmodule Htmixir.Application do
         Htmixir.ContactCache,
         name: Htmixir.ContactCache
       },
+      {
+        Htmixir.NewsCache,
+        name: Htmixir.NewsCache
+      },
       {Bandit, plug: Htmixir.Router}
     ]
 
